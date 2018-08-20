@@ -1,0 +1,20 @@
+{"frames": {
+
+"land_grass11.png":
+{
+	"frame": {"x":0,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "1111.png",
+	"format": "RGBA8888",
+	"size": {"w":128,"h":128},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:ffe8e50afedf73384f1a659e64ddb61d:331fe73058fca9a2f6afaa842e2efddf:80765cca7aa45356505e8b087b2ffb34$"
+}
+}

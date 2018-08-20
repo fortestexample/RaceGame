@@ -1,0 +1,58 @@
+{ "height":8,
+ "layers":[
+        {
+         "data":[2, 1, 4, 91, 91, 91, 91, 91, 2, 1, 1, 1, 4, 91, 91, 91, 5, 1, 1, 6, 90, 91, 90, 91, 91, 91, 5, 1, 24, 91, 91, 91, 90, 91, 91, 91, 90, 91, 29, 30, 90, 91, 23, 1, 1, 1, 24, 91, 91, 91, 91, 91, 90, 91, 2, 1, 24, 91, 90, 91, 90, 91, 91, 91, 91, 91, 91, 91, 91, 91, 91, 91, 90, 91, 90, 91, 91, 91, 90, 91, 23, 1, 1, 1, 1, 4, 91, 91, 91, 91, 91, 91, 90, 91, 90, 91, 91, 91, 90, 91, 91, 91, 91, 91, 91, 90, 91, 91, 2, 1, 1, 1, 24, 91, 90, 91, 91, 91, 90, 91, 2, 1, 42, 1, 1, 40, 91, 91, 90, 91, 91, 91, 91, 91, 90, 91, 91, 91, 23, 4, 80, 91, 91, 91, 91, 91, 91, 91, 38, 1, 1, 1, 1, 1, 40, 91, 91, 91, 91, 69],
+         "height":8,
+         "name":"Tile Layer 1",
+         "opacity":1,
+         "properties":
+            {
+             "collides":"true"
+            },
+         "type":"tilelayer",
+         "visible":true,
+         "width":20,
+         "x":0,
+         "y":0
+        }],
+ "orientation":"orthogonal",
+ "properties":
+    {
+
+    },
+ "tileheight":128,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "image":"C:\/Users\/Nikita\/Desktop\/123.png",
+         "imageheight":768,
+         "imagewidth":1920,
+         "margin":0,
+         "name":"123",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":128,
+         "tilewidth":128
+        }, 
+        {
+         "firstgid":91,
+         "image":"C:\/Users\/Nikita\/Desktop\/1111.png",
+         "imageheight":128,
+         "imagewidth":128,
+         "margin":0,
+         "name":"1111",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":128,
+         "tilewidth":128
+        }],
+ "tilewidth":128,
+ "version":1,
+ "width":20
+}
