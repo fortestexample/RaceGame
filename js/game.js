@@ -276,7 +276,7 @@ function update() {
 
     if (cursors.up.isDown)
     {
-        game.physics.arcade.velocityFromAngle(sprite.angle-90, 400, sprite.body.velocity);
+        game.physics.arcade.velocityFromRotation(sprite.angle-90, 400, sprite.body.velocity);
     }
 	
 	if(timer!=undefined && finishFlag==false)
