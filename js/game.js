@@ -121,6 +121,9 @@ function hitFinish(sprite, tile) {
 	timer.stop();
 	game.sound.stopAll();
 
+	totalRaceTime = new Date(totalRaceTime);
+	var abra = console.log(totalRaceTime.getMilliseconds());
+	
 	var storedNames=new Array();
 	var resultString;
 	var placeBadge="";
@@ -132,9 +135,7 @@ function hitFinish(sprite, tile) {
 		storedNames = JSON.parse(localStorage.getItem("scores"));
 		if(storedNames!=null)
 		{
-			console.log(storedNames.length);
 			storedNames.sort();
-			console.log(storedNames);
 			for(var i=0;i<=storedNames.length;i++)
 			{
 				if(totalRaceTime < storedNames[i])
@@ -185,7 +186,6 @@ function hitFinish(sprite, tile) {
 						resultString+=" <br> TRY AGAIN TO BEAT THE RECORD!";
 					}
 			}
-			console.log(storedNames.length);
 			localStorage.setItem("scores", JSON.stringify(storedNames));
 			
 			finishFlag=true;
@@ -276,7 +276,7 @@ function update() {
 
     if (cursors.up.isDown)
     {
-        game.physics.arcade.velocityFromRotation(sprite.angle-90, 400, sprite.body.velocity);
+        game.physics.arcade.velocityFromAngle(sprite.angle-90, 400, sprite.body.velocity);
     }
 	
 	if(timer!=undefined && finishFlag==false)
