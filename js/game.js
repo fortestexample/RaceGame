@@ -82,12 +82,12 @@ function create() {
     sprite.body.maxAngular = 500;
     sprite.body.angularDrag = 50;
 	
-	spriteEnemy = game.add.sprite(190, 960, 'carEnemy');
+	/*spriteEnemy = game.add.sprite(190, 960, 'carEnemy');
     spriteEnemy.anchor.set(0.5);
     game.physics.enable(spriteEnemy);
 	spriteEnemy.body.collideWorldBounds=true;
     spriteEnemy.body.maxAngular = 500;
-    spriteEnemy.body.angularDrag = 50;
+    spriteEnemy.body.angularDrag = 50;*/
 
     game.camera.follow(sprite);
 
