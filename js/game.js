@@ -137,7 +137,7 @@ function hitFinish(sprite, tile) {
 			console.log(storedNames);
 			for(var i=0;i<=storedNames.length;i++)
 			{
-				if(totalRaceTime < storedNames[i])
+				if(totalRaceTime*1000 < storedNames[i]*1000)
 				{
 					resultString="Your place is - "+(i+1);
 					if((i+1)<=10)
