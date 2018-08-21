@@ -120,9 +120,6 @@ function restartGame()
 function hitFinish(sprite, tile) {
 	timer.stop();
 	game.sound.stopAll();
-
-	totalRaceTime = new Date(totalRaceTime);
-	var abra = console.log(totalRaceTime.getMilliseconds());
 	
 	var storedNames=new Array();
 	var resultString;
@@ -138,7 +135,7 @@ function hitFinish(sprite, tile) {
 			storedNames.sort();
 			for(var i=0;i<=storedNames.length;i++)
 			{
-				if(totalRaceTime < storedNames[i])
+				if(totalRaceTime*1000 < storedNames[i]*1000)
 				{
 					resultString="Your place is - "+(i+1);
 					if((i+1)<=10)
