@@ -3,6 +3,7 @@ var emitter;
 var emitter2;
 
 function preload() {
+	game.load.crossOrigin = "Anonymous";
 	game.forceSingleUpdate = true;
     //game.load.tilemap('map', 'assets/races/race.json', null, Phaser.Tilemap.TILED_JSON);
 	game.load.tilemap('map', 'assets/races/race2.json', null, Phaser.Tilemap.TILED_JSON);
@@ -22,7 +23,6 @@ function preload() {
 	game.load.image('3', 'assets/races/white.png');
 	
 	game.load.audio('boden', ['assets/audio/bodenstaendig_2000_in_rock_4bit.mp3', 'assets/audio/bodenstaendig_2000_in_rock_4bit.ogg']);
-
 }
 var map;
 var layer;
@@ -82,12 +82,12 @@ function create() {
     sprite.body.maxAngular = 500;
     sprite.body.angularDrag = 50;
 	
-	/*spriteEnemy = game.add.sprite(190, 960, 'carEnemy');
+	spriteEnemy = game.add.sprite(190, 960, 'carEnemy');
     spriteEnemy.anchor.set(0.5);
     game.physics.enable(spriteEnemy);
 	spriteEnemy.body.collideWorldBounds=true;
     spriteEnemy.body.maxAngular = 500;
-    spriteEnemy.body.angularDrag = 50;*/
+    spriteEnemy.body.angularDrag = 50;
 
     game.camera.follow(sprite);
 
@@ -115,6 +115,10 @@ function restartGame()
 	startFlag=false;
 	finishFlag=false;
 	game.state.start(game.state.current);
+}
+function resetResults()
+{
+	localStorage.clear();
 }
 
 function hitFinish(sprite, tile) {
@@ -290,7 +294,6 @@ function update() {
 function render() {
 
     //game.debug.body(sprite);
-		//console.log('X:' + this.input.activePointer.x);
-
-//console.log('Y:' + this.input.activePointer.y);
+		/*console.log('X:' + this.input.activePointer.x);
+		console.log('Y:' + this.input.activePointer.y);*/
 }
