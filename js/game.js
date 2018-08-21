@@ -124,7 +124,7 @@ function resetResults()
 function hitFinish(sprite, tile) {
 	timer.stop();
 	game.sound.stopAll();
-
+	
 	var storedNames=new Array();
 	var resultString;
 	var placeBadge="";
@@ -136,9 +136,7 @@ function hitFinish(sprite, tile) {
 		storedNames = JSON.parse(localStorage.getItem("scores"));
 		if(storedNames!=null)
 		{
-			console.log(storedNames.length);
 			storedNames.sort();
-			console.log(storedNames);
 			for(var i=0;i<=storedNames.length;i++)
 			{
 				if(totalRaceTime*1000 < storedNames[i]*1000)
@@ -189,7 +187,6 @@ function hitFinish(sprite, tile) {
 						resultString+=" <br> TRY AGAIN TO BEAT THE RECORD!";
 					}
 			}
-			console.log(storedNames.length);
 			localStorage.setItem("scores", JSON.stringify(storedNames));
 			
 			finishFlag=true;
