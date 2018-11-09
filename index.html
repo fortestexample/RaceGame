@@ -7,34 +7,23 @@
  
     <body>
         <script src="phaser/dist/phaser.2.6.2.min.js"></script>
-        <script src="js/game.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		
-		<!-- Modal -->
-	  <div class="modal fade" id="myModal" role="dialog">
-		<div class="modal-dialog">
+		<script src="js/boot.js"></script>
+		<script src="js/preload.js"></script>
+		<script src="js/gametitle.js"></script>
+		<script src="js/thegame.js"></script>
+		<script src="js/gameover.js"></script>	
 		
-		  <!-- Modal content-->
-		  <div class="modal-content">
-			<div class="modal-header">
-			  <button type="button" class="close" data-dismiss="modal">&times;</button>
-			  <h4 class="modal-title">RACE COMPLETE!</h4>
-			</div>
-			<div class="modal-body" style="width:220px; float:left;" id='scoreboard'>
-			</div>
-			<img style="width:100px; height:100px;" id="placeBadge">
-			</img>
-			<div class="modal-footer">
-			  <button type="button" class="btn btn-default" onclick="resetResults();">Reset results</button>
-			  <button type="button" class="btn btn-default" onclick="restartGame();" data-dismiss="modal">Try again</button>
-			</div>
-		  </div>
-		  
-		</div>
-	  </div>
-		
-		
+		<script>
+			(function() {
+				var game = new Phaser.Game(800, 600, Phaser.AUTO, "game");
+				game.state.add("Boot",boot);
+				game.state.add("Preload",preload);
+				game.state.add("GameTitle",gameTitle);
+				game.state.add("TheGame",theGame);
+				game.state.add("GameOver",gameOver);
+				game.state.start("Boot");
+			})();    
+		</script>
     </body>
 </html>
